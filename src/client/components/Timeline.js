@@ -15,9 +15,9 @@ class Timeline extends Component {
       let urlPerfil;
 
       if(this.login === undefined) {
-        urlPerfil = `http://192.168.1.4:8080/api/fotos?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`;
+        urlPerfil = `http://localhost:8080/api/fotos?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`;
       } else {
-        urlPerfil = `http://192.168.1.4:8080/api/public/fotos/${this.login}`;
+        urlPerfil = `http://localhost:8080/api/public/fotos/${this.login}`;
       } 
 
       this.props.lista(urlPerfil);                  

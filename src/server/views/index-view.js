@@ -17,7 +17,7 @@ function createReduxStore(req, match) { // eslint-disable-line
     notificacao: ''
   };
   const store = createStore(rootReducer, initialState, applyMiddleware(thunkMiddleware));
-  const promisse = store.dispatch(TimelineApi.lista(`http://192.168.1.4:8080/api/fotos?X-AUTH-TOKEN=${req.state['auth-token']}`));
+  const promisse = store.dispatch(TimelineApi.lista(`http://localhost:8080/api/fotos?X-AUTH-TOKEN=${req.state['auth-token']}`));
   return promisse.then(() => store);
 }
 

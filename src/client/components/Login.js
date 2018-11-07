@@ -19,7 +19,7 @@ export default class Login extends Component {
             })
         };
 
-        fetch('http://192.168.1.4:8080/api/public/login',requestInfo)
+        fetch('http://localhost:8080/api/public/login',requestInfo)
             .then(response => {
                 if(response.ok) {
                     return response.text();

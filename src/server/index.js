@@ -30,9 +30,9 @@ const cacheConfig = {
 support.load()
   .then(() => {
     const config = electrodeConfippet.config;
-
+    
     SSRCaching.enableCaching();
     SSRCaching.setCachingConfig(cacheConfig);
-
-    require("electrode-server")(config, [staticPathsDecor()]);  // eslint-disable-line
+    
+    let test = require("electrode-server")(config, [staticPathsDecor()]);  // eslint-disable-line
   });
