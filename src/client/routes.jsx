@@ -2,6 +2,7 @@ import React from "react";
 import {Route, IndexRoute} from "react-router";
 import Home from "./components/home";
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Logout from './components/Logout';
 import {matchPattern} from 'react-router/lib/PatternUtils';
 
@@ -21,7 +22,8 @@ function verificaAutenticacao(nextState,replace) {
 export const routes = (
   <Route path="/">
 	  <IndexRoute component={Login}/>
-		<Route path="/logout" component={Logout}/>	    	    	
-	  <Route path="/timeline(/:login)" component={Home} onEnter={verificaAutenticacao}/>  
+    <Route path="/signup" component={Signup} />
+		<Route path="/logout" component={Logout} />
+	  <Route path="/timeline(/:login)" component={Home} onEnter={verificaAutenticacao}/>
   </Route>
 );
